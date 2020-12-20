@@ -71,19 +71,22 @@
       padding: 0.65em;
       margin-left: 10em;
       margin-right: 4em;
+      min-width: 16em;
+      min-height: 16em;
+      width: 16em;
+      height: 16em;
+      overflow: hidden;
       @include media('<=tablet') {
         margin-left: auto;
         margin-right: auto;
+        min-width: 13em;
+        min-height: 13em;
+        width: 13em;
+        height: 13em;
       }
-      img {
-        display: block;
+      div {
+        width: 100%;
         border-radius: 100%;
-        width: 16em;
-        height: 16em;
-        @include media('<=tablet') {
-          width: 13em;
-          height: 13em;
-        }
       }
     }
   }

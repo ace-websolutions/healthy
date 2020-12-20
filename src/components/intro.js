@@ -1,7 +1,20 @@
 import React from 'react';
-import food from '../images/food.jpg';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Intro = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "food.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <section id='intro' className='container'>
       <div className='intro'>
@@ -16,7 +29,11 @@ const Intro = () => {
           <a href='#'>Learn More</a>
         </div>
         <div className='picture'>
-          <img src={food} alt='' />
+          <Img
+            fluid={data.file.childImageSharp.fluid}
+            title='Food'
+            alt='Food on table'
+          />
         </div>
       </div>
     </section>
