@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { motion } from 'framer-motion';
 import Img from 'gatsby-image';
 
 const Intro = () => {
@@ -26,7 +27,13 @@ const Intro = () => {
             praesentium, corporis odio cupiditate iste temporibus hic? Vitae
             quam rerum deleniti?
           </p>
-          <a href='#'>Learn More</a>
+          <motion.a
+            href='#'
+            whileHover={{ scale: 1.1, backgroundColor: '#76e876' }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Learn More
+          </motion.a>
         </div>
         <div className='picture'>
           <Img

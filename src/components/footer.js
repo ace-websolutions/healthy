@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
@@ -12,7 +13,13 @@ const Footer = () => {
             nostrum odit maiores tenetur consequatur magnam, nihil velit
             accusantium suscipit vel corporis ipsa quod.
           </p>
-          <a href='#'>Learn More</a>
+          <motion.a
+            href='#'
+            whileHover={{ scale: 1.1, backgroundColor: '#76e876' }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Learn More
+          </motion.a>
         </div>
         <div className='contact'>
           <h3>Reach out</h3>

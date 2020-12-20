@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 const SignUp = () => {
   return (
     <section id='signUp' className='container'>
@@ -11,8 +11,20 @@ const SignUp = () => {
             itaque quo!
           </p>
           <div className='buttons'>
-            <a href='#'>Get Started</a>
-            <a href='#'>Learn More</a>
+            <motion.a
+              href='#'
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started
+            </motion.a>
+            <motion.a
+              href='#'
+              whileHover={{ scale: 1.1, backgroundColor: '#76e876' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Learn More
+            </motion.a>
           </div>
         </div>
       </div>
