@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
           <div className='method'>
             <h5>Email</h5>
-            <p>information@happyhealthy.com</p>
+            <p>info@happyhealthy.com</p>
           </div>
           <div className='social'>
             <ul>

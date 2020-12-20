@@ -7,7 +7,7 @@ const Nav = () => {
       <ul>
         <li>
           <SmoothLink to='intro' smooth={true} duration={500}>
-            Intro
+            About
           </SmoothLink>
         </li>
         <li>

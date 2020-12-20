@@ -15,6 +15,12 @@
       width: 50%;
       max-width: 50%;
       padding: 3em;
+      @include media('<=phone') {
+        padding: 0 0 3em 0;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
       h3 {
         color: rgba(66, 66, 66, 0.849);
         font-size: 1.5em;
@@ -54,6 +60,11 @@
       min-width: 50%;
       width: 50%;
       max-width: 50%;
+      @include media('<=phone') {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+      }
       h3 {
         color: rgba(66, 66, 66, 0.849);
         font-size: 1.5em;
@@ -73,7 +84,7 @@
           line-height: 1.5;
           margin: 0 0 0.7em 0;
           letter-spacing: -0.025em;
-          width: 5em;
+          min-width: 5em;
         }
         p {
           line-height: 1.65;
@@ -81,6 +92,9 @@
           line-height: 1.5;
           margin: 0 0 0.7em 0;
           letter-spacing: -0.025em;
+          @include media('<=tablet') {
+            font-size: 0.9em;
+          }
         }
       }
       .social {
@@ -114,6 +128,10 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      padding: 0;
+      @include media('<=phone') {
+        text-align: center;
+      }
       li {
         padding: 0.25em;
         a {

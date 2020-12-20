@@ -119,6 +119,10 @@ article:last-child {
       &:nth-child(1) {
         margin-right: 0.5em;
         background-color: $five;
+        @include media('<=phone') {
+          margin-right: 0;
+          margin-bottom: 1em;
+        }
       }
     }
   }

@@ -9,6 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include media('<=tablet') {
+      width: 80%;
+    }
     .logo-container {
       background: #fff;
       padding: 2em;

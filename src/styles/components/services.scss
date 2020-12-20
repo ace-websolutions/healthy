@@ -10,6 +10,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include media('<=phone') {
+        flex-direction: column;
+      }
       .service-item {
         display: flex;
         flex-direction: column;
@@ -21,10 +24,24 @@
           border: solid 1px #ddd;
           padding: 4em;
           position: relative;
+          @include media('<=tablet') {
+            padding: 3em;
+          }
+          @include media('<=phone') {
+            padding: 4em;
+          }
           svg {
             width: 8em;
             height: 8em;
             fill: $three;
+            @include media('<=tablet') {
+              width: 5em;
+              height: 5em;
+            }
+            @include media('<=phone') {
+              width: 8em;
+              height: 8em;
+            }
           }
           &::after {
             content: '';
